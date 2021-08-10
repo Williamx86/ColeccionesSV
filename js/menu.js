@@ -13,7 +13,7 @@ if (screen.width < 1100) {
     desplegable.addEventListener("click", enlace);
 
     function enlace(){
-        window.location.href='/validacion.html';
+        window.location.href='https://williamx86.github.io/ColeccionesSV/validacion.html';
     }
 
 }
