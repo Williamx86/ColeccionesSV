@@ -180,12 +180,14 @@ body {
 
 .texto-p {
     font-size: 3.5rem;
+    white-space: nowrap;
     letter-spacing: 0.8rem;
 }
 
 .texto-c {
-    font-family: 'Cherolina';
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.8rem;
+    padding: 1rem 0 2rem 0;
 }
 
 .btn-buscar {
@@ -521,6 +523,7 @@ footer {
     text-align: justify;
     color: #A5A8A9;
     font-size: 1.1rem;
+    line-height: 2rem;
 }
 
 .contacto p:first-child {
@@ -1001,6 +1004,10 @@ footer {
     height: 100%;
 }
 
+.texto-m{
+    display: none;
+}
+
 @keyframes menus {
     from {
         height: 0px;
@@ -1044,14 +1051,24 @@ footer {
     }
 
     .texto-p {
-        font-size: 1.6rem;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        white-space:  pre-wrap;
+        display: none;
+    }
+
+    .texto-c {
+        font-size: 1.1rem;
         letter-spacing: 0.4rem;
         white-space: nowrap;
     }
 
-    .texto-c {
-        font-family: 'Cherolina';
-        font-size: 3rem;
+    .texto-m{
+        display: block;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        white-space: nowrap;
+        margin: 0;
     }
 
     .btn-buscar {
@@ -1257,6 +1274,13 @@ footer {
 
     .gracias {
         padding: 3rem 0 6rem 0;
+    }
+
+    .nosotros p:not(:first-child) {
+        text-align: center;
+        line-height: 2rem;
+        color: #A5A8A9;
+        font-size: 1.1rem;
     }
 
 }
