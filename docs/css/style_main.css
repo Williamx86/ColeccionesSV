@@ -339,7 +339,7 @@ body {
     width: 100%;
 }
 
-.insta-info div {
+.insta-info div:first-child {
     padding-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -1008,6 +1008,24 @@ footer {
     display: none;
 }
 
+.instagram_carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.instagram_carrusel img{
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.instagram_carrusel img:not(:first-child){
+margin-left: 1.5rem;
+}
+
 @keyframes menus {
     from {
         height: 0px;
@@ -1029,6 +1047,22 @@ footer {
     to {
         width: 100%;
         height: 100%;
+    }
+}
+
+@media only screen and (max-width:1400px){
+    .instagram_carrusel img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width:1200px){
+    .instagram_carrusel img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
 }
 
@@ -1112,6 +1146,25 @@ footer {
 }
 
 @media only screen and (max-width:768px) {
+
+    .instagram_carrusel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    
+    .instagram_carrusel img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .instagram_carrusel img:not(:first-child){
+    margin-left: 0rem;
+    margin-top: 1rem;
+    }
 
     .columna_2 p,
     .columna_3 p {
