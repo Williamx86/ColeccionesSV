@@ -1,8 +1,14 @@
 var counter = 1;
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter > 4){
+var reiniciar = 4;
+
+const tiempo = setInterval(function () {
+    if (counter <= 4) {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+    } else if (reiniciar > 1) {
+        document.getElementById('radio' + reiniciar).checked = true;
+        reiniciar--;
+    } else {
         counter = 1;
     }
-},5000);
+}, 4300);

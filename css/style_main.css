@@ -25,6 +25,10 @@ body {
 .menu_principal {
     width: 100%;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
     align-items: center;
     justify-content: center;
 }
@@ -227,7 +231,7 @@ body {
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .manual-btn:not(:last-child) {
@@ -267,7 +271,7 @@ body {
     border: 1px solid #fff;
     padding: 5px;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .navigation-auto div:not(:last-child) {
@@ -324,6 +328,7 @@ body {
 
 .sec {
     padding: 6rem 0;
+    position: relative;
 }
 
 .sec-insta {
@@ -332,10 +337,10 @@ body {
 
 .borde-inferior {
     background: #fff;
-    transform: translateY(150px);
     width: 100%;
     height: 90px;
     position: absolute;
+    bottom: 5%;
 }
 
 .insta-info {
@@ -368,6 +373,7 @@ body {
 
 .foot {
     padding: 6rem 0;
+    position: relative;
 }
 
 footer {
@@ -433,6 +439,7 @@ footer {
 }
 
 .footer_centrado {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -523,7 +530,7 @@ footer {
 }
 
 .nosotros p:not(:first-child) {
-    text-align: justify;
+    text-align: center;
     color: #A5A8A9;
     font-size: 1.1rem;
     line-height: 2rem;
@@ -1007,26 +1014,58 @@ footer {
     height: 100%;
 }
 
-.texto-m{
+.texto-m {
     display: none;
 }
 
-.instagram_carrusel{
+.instagram_carrusel {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
 }
 
-.instagram_carrusel img{
+.instagram_carrusel img {
     cursor: pointer;
     width: 300px;
     height: 300px;
     object-fit: cover;
 }
 
-.instagram_carrusel img:not(:first-child){
-margin-left: 1.5rem;
+.instagram_carrusel img:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+.logo_completo img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+.logo_completo {
+    padding-bottom: 2rem;
+    transform: translateX(-13px);
+}
+
+.btn_subir {
+    cursor: pointer;
+    background: #A5A8A9;
+    position: absolute;
+    top: 0;
+    right: 6%;
+    transform: translateY(-20px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_subir img {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
 }
 
 @keyframes menus {
@@ -1053,16 +1092,16 @@ margin-left: 1.5rem;
     }
 }
 
-@media only screen and (max-width:1400px){
-    .instagram_carrusel img{
+@media only screen and (max-width:1400px) {
+    .instagram_carrusel img {
         width: 250px;
         height: 250px;
         object-fit: cover;
     }
 }
 
-@media only screen and (max-width:1200px){
-    .instagram_carrusel img{
+@media only screen and (max-width:1200px) {
+    .instagram_carrusel img {
         width: 200px;
         height: 200px;
         object-fit: cover;
@@ -1090,7 +1129,7 @@ margin-left: 1.5rem;
     .texto-p {
         font-size: 2rem;
         letter-spacing: 0.4rem;
-        white-space:  pre-wrap;
+        white-space: pre-wrap;
         display: none;
     }
 
@@ -1100,7 +1139,7 @@ margin-left: 1.5rem;
         white-space: nowrap;
     }
 
-    .texto-m{
+    .texto-m {
         display: block;
         font-size: 2rem;
         letter-spacing: 0.4rem;
@@ -1150,23 +1189,37 @@ margin-left: 1.5rem;
 
 @media only screen and (max-width:768px) {
 
-    .instagram_carrusel{
+    .logo_completo img {
+        width: 75%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .logo_completo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .instagram_carrusel {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 2rem 0;
     }
-    
-    .instagram_carrusel img{
+
+    .instagram_carrusel img {
         width: 250px;
         height: 250px;
         object-fit: cover;
     }
-    
-    .instagram_carrusel img:not(:first-child){
-    margin-left: 0rem;
-    margin-top: 1rem;
+
+    .instagram_carrusel img:not(:first-child) {
+        margin-left: 0rem;
+        margin-top: 1rem;
     }
 
     .columna_2 p,
@@ -1337,6 +1390,19 @@ margin-left: 1.5rem;
         line-height: 2rem;
         color: #A5A8A9;
         font-size: 1.1rem;
+    }
+
+    .borde-inferior {
+        background: #fff;
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        bottom: 3%;
+    }
+
+    .sec {
+        padding: 5rem 0;
+        position: relative;
     }
 
 }

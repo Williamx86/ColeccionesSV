@@ -12,8 +12,26 @@ if (screen.width < 1100) {
 
     desplegable.addEventListener("click", enlace);
 
-    function enlace(){
-        window.location.href='https://williamx86.github.io/ColeccionesSV/validacion.html';
+    function enlace() {
+        window.location.href = 'https://williamx86.github.io/ColeccionesSV/validacion.html';
     }
 
 }
+
+$(document).ready(function () {
+
+    $('.subir').click(function () {
+        $('body, html').animate({
+            scrollTop: '0px'
+        }, 300);
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.subir').slideDown(300);
+        } else {
+            $('.subir').slideUp(300);
+        }
+    });
+
+});
