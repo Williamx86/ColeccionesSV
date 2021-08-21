@@ -332,7 +332,10 @@ body {
 }
 
 .sec-insta {
-    border-radius: 1.5rem;
+    background-image: url(../img/fondo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 .borde-inferior {
@@ -348,7 +351,7 @@ body {
 }
 
 .insta-info div:first-child {
-    padding-top: 3rem;
+    padding-top: 4.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1109,6 +1112,10 @@ footer {
 }
 
 @media only screen and (max-width:1100px) {
+    .insta-info div:first-child {
+        padding-top: 3rem;
+    }
+
     .opciones {
         display: none;
     }
@@ -1184,6 +1191,17 @@ footer {
 
     .articulos_dos {
         padding: 0;
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .sec-int {
+        border-radius: 1.5rem;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+    }
+
+    .sec-insta {
+        background-image: none;
     }
 }
 
@@ -1280,7 +1298,7 @@ footer {
     .ir-arriba {
         position: fixed;
         bottom: 30px;
-        left: 50%;
+        left: 9%;
         transform: translateX(-50%);
         width: 315px;
         background: #fff;
